@@ -1,0 +1,19 @@
+# Calibration for xwr_raw_ros configs/6843aop/test.cfg.
+#
+# range_scale = true_range_max_m / raw_range_max_m. true_range_max_m is TI's
+# "Maximum unambiguous Range" from the .cfg header, and raw_range_max_m is the
+# range_max the driver computes from the profileCfg line. The ratio is TI's
+# derating of the maximum range, not a fit to measured distances.
+# The azimuth calibration is the identity, so azimuth is not calibrated.
+# The values are kept because they produced the recorded results.
+# See the package README for details.
+profile: test
+raw_range_max_m: 9.0300
+true_range_max_m: 7.17
+range_scale: 0.79402
+range_offset: 0.0
+range_resolution_m: 0.0403
+azimuth_scale: 1.0
+azimuth_offset_deg: 0.0
+notes: |
+  3-TX TDM-MIMO profile with 224 ADC samples per chirp.

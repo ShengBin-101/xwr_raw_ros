@@ -1,0 +1,23 @@
+# Calibration for xwr_raw_ros configs/6843aop/near_mimo.cfg.
+#
+# range_scale = true_range_max_m / raw_range_max_m. true_range_max_m is TI's
+# "Maximum unambiguous Range" from the .cfg header, and raw_range_max_m is the
+# range_max the driver computes from the profileCfg line. The ratio is TI's
+# derating of the maximum range, not a fit to measured distances.
+# The azimuth calibration is the identity, so azimuth is not calibrated.
+# The values are kept because they produced the recorded results.
+# See the package README for details.
+profile: near_mimo
+raw_range_max_m: 3.6141
+true_range_max_m: 2.88
+range_scale: 0.79688
+range_offset: 0.0
+range_resolution_m: 0.0452
+azimuth_scale: 1.0
+azimuth_offset_deg: 0.0
+notes: |
+  The launch file's default profile. It has the same profileCfg line as
+  near.cfg, so the same range calibration (2.88 / 3.6141 = 0.79688, both from
+  this profile). The chirp sequence is a 3-TX TDM-MIMO sequence (TX0, TX1,
+  TX2) instead of near.cfg's single TX0. The 48 chirps fit in the 200 ms frame
+  period: the profile was verified live at 5 Hz.

@@ -1,0 +1,1 @@
+shape=(80, 181) range_res=0.045176468789577484 angle_res=1 angle_range=90

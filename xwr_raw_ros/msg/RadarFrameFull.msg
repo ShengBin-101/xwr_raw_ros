@@ -1,0 +1,18 @@
+# Modified by Chan Sheng Bin, 2026: Header -> std_msgs/Header for ROS 2. See NOTICE.
+std_msgs/Header header
+string platform
+uint8 adc_output_fmt
+float32 range_bias
+float32[] rx_phase_bias
+float32 chirp_time
+float32 chirp_slope
+float32 frame_time
+float32 velocity_max
+float32 velocity_res
+float32 sample_rate
+float32 range_max
+float32 range_res
+uint8[] rx
+uint8[] tx
+uint32[] shape
+int16[] data

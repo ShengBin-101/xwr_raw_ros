@@ -1,0 +1,6 @@
+# Modified by Chan Sheng Bin, 2026: reduced to what the ROS 2 code imports. See NOTICE.
+# The same packages are declared in package.xml for rosdep; this file is for pip.
+pyserial
+numpy
+scipy
+numba

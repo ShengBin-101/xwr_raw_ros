@@ -104,3 +104,16 @@ venv.bak/
 .mypy_cache/
 
 data/
+
+# colcon and Python
+build/
+install/
+log/
+__pycache__/
+*.pyc
+
+# generated figures
+figures/out/
+
+# the figure inputs ship with the repository
+!figures/data/

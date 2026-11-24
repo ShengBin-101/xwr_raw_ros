@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>radar_pipelines</name>
+  <version>0.1.0</version>
+  <description>
+    Processing nodes for the TI IWR6843AOP raw-data driver in xwr_raw_ros:
+    range-azimuth and range-elevation heatmaps in the MMVR dual-view layout,
+    a CFAR point cloud, heatmap viewers and a background-capture helper.
+  </description>
+  <maintainer email="ShengBin-101@users.noreply.github.com">Chan Sheng Bin</maintainer>
+  <license>Apache-2.0</license>
+
+
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>rcl_interfaces</depend>
+  <depend>cv_bridge</depend>
+  <depend>xwr_raw_ros</depend>
+
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <!-- Python libraries are declared here as apt-backed exec_depends, not in
+       setup.py's install_requires. Listing them in install_requires makes the
+       console-script wrappers used by `ros2 run` and `ros2 launch` fail with
+       pkg_resources.DistributionNotFound when only the apt packages are
+       installed. -->
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-scipy</exec_depend>
+  <exec_depend>python3-opencv</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>python3-numba</exec_depend>
+
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

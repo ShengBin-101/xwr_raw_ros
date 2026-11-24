@@ -1,0 +1,41 @@
+xwr_raw_ros, ROS 2 branch
+
+This repository is a fork of xwr_raw_ros by the Connected Systems Lab (Emerson Sie, Deepak
+Vasisht and colleagues, https://github.com/ConnectedSystemsLab/xwr_raw_ros), taken at commit
+b6ec81d (30 Apr 2024) and licensed under the Apache License, Version 2.0 (LICENSE). Upstream's work is
+the ROS 1 driver for TI mmWave radar evaluation boards with the DCA1000EVM: configuration over
+the serial port, raw ADC capture over Ethernet, the signal processing in xwr_raw/dsp.py, the
+message definitions, chirp profiles, udev rules, the TI documents in xwr_raw_ros/docs/ and the
+board images. The branch `main` is upstream's code, unchanged.
+
+The branch `ros2` was made by Chan Sheng Bin at the National University of Singapore in 2026,
+for the radar study of a final-year project. Its changes and additions are
+Copyright 2026 Chan Sheng Bin, licensed under the Apache License, Version 2.0.
+
+Changed upstream files (each carries a notice at its top):
+- xwr_raw_ros/CMakeLists.txt, package.xml, requirements.txt: rewritten for ROS 2 (ament_cmake)
+- xwr_raw_ros/nodes/radar.py: ported from rospy to rclpy, receiving and publishing in separate
+  threads
+- xwr_raw_ros/msg/RadarFrameFull.msg, RadarFrameStamped.msg: std_msgs/Header for ROS 2
+- xwr_raw_ros/src/xwr_raw/radar_config.py: tx counts the transmitters the frame's chirps fire,
+  numeric fields cast to float, header lines skipped
+- xwr_raw_ros/src/xwr_raw/dsp.py: the TX count checked against the chirp count (tx_override),
+  FFT inputs cast to complex128 for NumPy 1 and 2, NumPy 2 compatible complex types
+- xwr_raw_ros/src/xwr_raw/dca1000.py: SO_REUSEADDR, command timeout 25 s
+- xwr_raw_ros/src/xwr_raw/radar_pub.py: 8 MB UDP receive buffer
+- xwr_raw_ros/configs/6843aop/test.cfg (from 6843aop_range_v0.cfg): 50 ms frames, static clutter
+  removal on, CFAR range field of view 1 m
+- xwr_raw_ros/README.md: rewritten for ROS 2 and the IWR6843AOP
+
+Removed from upstream on this branch: the ROS 1 launch files, the viewer nodes (visra.py,
+visda.py), radar_cfg.py, dca.py, dca_cfg.py, the C++ receiver (recver.cpp), setup.py,
+xwr_raw/image_tools.py, the profiles and udev rule of other boards, the other boards' images,
+and 6843aop_doppler_v0.cfg.
+
+Added on this branch: xwr_raw_ros/launch/radar.launch.py, xwr_raw/elevation.py,
+xwr_raw/rexo_processing.py, configs/6843aop/near.cfg and near_mimo.cfg, the package
+radar_pipelines/, the figure scripts and data in figures/, and this file.
+
+REXO (https://github.com/merlresearch/radar-bbox-diffusion, AGPL-3.0) is not included. The
+heatmaps of xwr_raw/rexo_processing.py follow the layout described in M. Mahbubur Rahman et al.,
+"MMVR: Millimeter-wave Multi-View Radar Dataset and Benchmark for Indoor Perception", ECCV 2024.
