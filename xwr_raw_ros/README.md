@@ -81,7 +81,7 @@ sudo usermod -a -G dialout $USER    # then log out and back in
 - [Introduction to mmWave sensing: FMCW radars](docs/Introduction_to_mmwave_Sensing_FMCW_Radars.pdf)
 - [MIMO radar](docs/MIMO_Radar.pdf)
 - [Raw data capture for XWR6843 with the DCA1000](docs/mmWave_sensor_raw_data_capture_using_DCA1000_xwr6843.pdf)
-- [UniFlash](https://dev.ti.com/uniflash/#!/), to flash the mmWave SDK demo onto the radar
+- [UniFlash](https://www.ti.com/tool/UNIFLASH), to flash the mmWave SDK demo onto the radar
 - [mmWave Demo Visualizer](https://dev.ti.com/gallery/view/mmwave/mmWave_Demo_Visualizer/), to make profiles
 
 ## Citation
