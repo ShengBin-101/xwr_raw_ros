@@ -9,7 +9,7 @@ Experiment 1 (data/exp1_results.json, recorded 28 Nov 2025 with configs/6843aop/
     program that wrote results.json no longer exists, so this experiment cannot be rerun from the radar data.
 Experiment 2 (data/exp2_heatmap.npy, 17 Aug 2026): range x azimuth, 80 x 181 bins at 1 degree, holding ln(power)
     from a dsp.compute_range_azimuth_* beamformer, so dB = 10/ln(10) * value. The program that wrote it was not
-    kept: it was Capon or Bartlett (both return ln(power) here). Range is scaled by near_mimo's 0.79688
+    kept: it was the Capon beamformer. Range is scaled by near_mimo's 0.79688
     (2.88 / 3.6141 m, the same kind of header ratio). The camera-predicted bearings of the two objects
     (-10 and +15 degrees, 25 cm apart) were measured at the time.
 """

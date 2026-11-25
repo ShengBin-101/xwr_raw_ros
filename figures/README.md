@@ -26,7 +26,7 @@ What cannot be rerun:
   during the project. The figure is drawn from its stored output. The profile was
   `xwr_raw_ros/configs/6843aop/test.cfg` (4.0 cm range bins).
 - **Experiment 2.** The program that wrote `exp2_heatmap.npy` was not kept. Its values are
-  ln(power) from one of `xwr_raw.dsp`'s beamformers, Capon or Bartlett.
+  ln(power) from `xwr_raw.dsp`'s Capon beamformer.
 
 Distances are scaled by the profile's header ratio (0.79402 for test.cfg, 0.79688 for
 near_mimo.cfg), as explained in the repository README.
