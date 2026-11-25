@@ -41,8 +41,9 @@ Choosing a method for the tabletop case
 
       Cost, measured on a Jetson over an 80x141 heatmap with the default
       window (guard 2, noise 4): ca 3.5 ms, go/so 1.7 ms, os 74 ms. OS is
-      about 20x CA but still allows about 13 Hz, above the 5 Hz these chirp
-      profiles deliver. If it ever becomes the limit, reduce noise_len.
+      about 20x CA but still allows about 13 Hz on these maps, above the
+      5 Hz of near.cfg and near_mimo.cfg. test.cfg (20 Hz, 224 range bins)
+      was not timed. If OS becomes the limit, reduce noise_len.
 
       It stays robust only while at most (1 - rank_frac) of the training
       set is contaminated. Past that its estimate is dragged up too.
