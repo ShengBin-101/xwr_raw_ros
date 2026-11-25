@@ -60,8 +60,8 @@ the chirp parameters.
 | Profile | Transmitters | Chirps per frame | Samples | Range bin | Maximum range | Frame rate | Used for |
 |---|---|---|---|---|---|---|---|
 | `near.cfg` | TX1 only | 16 | 80 | 4.5 cm | 3.61 m | 5 Hz | short range, no azimuth MIMO |
-| `near_mimo.cfg` | TX1, TX2, TX3 | 48 | 80 | 4.5 cm | 3.61 m | 5 Hz | the processing's default |
-| `test.cfg` | TX1, TX2, TX3 | 60 | 224 | 4.0 cm | 9.03 m | 20 Hz | the dissertation's recordings |
+| `near_mimo.cfg` | TX1, TX2, TX3 | 48 | 80 | 4.5 cm | 3.61 m | 5 Hz | the processing's default, and the dissertation's Experiment 2 |
+| `test.cfg` | TX1, TX2, TX3 | 60 | 224 | 4.0 cm | 9.03 m | 20 Hz | the dissertation's Experiment 1 and person recording |
 
 **Range scale.** The processing scales range by the ratio of the profile header's "maximum
 unambiguous range" to the range the driver computes: 2.88 / 3.6141 = 0.79688 for `near.cfg` and
