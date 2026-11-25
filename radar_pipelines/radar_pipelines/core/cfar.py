@@ -56,7 +56,7 @@ Choosing a method for the tabletop case
       of cells in the whole frame, with no local noise estimate.
 
       It exists because a local-neighbourhood detector did not work on this
-      radar's near-field heatmaps. On an earlier tabletop recording the
+      radar's near-field heatmaps. On the single-bottle recording (Experiment 1) the
       usable dynamic range was about 17 dB (median cell about 88 dB, 99th
       percentile about 105 dB) and structured by sidelobe energy, so CA-CFAR
       flagged 7-16% of all cells at every threshold tried from 3 to 30 dB,
